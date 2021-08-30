@@ -1,0 +1,66 @@
+.toggle-cb {
+    display: none;
+    
+     }
+  
+  .toggle-cb + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 140px;
+    height: 50px;
+    background-color: lightgrey;
+    border-radius: 50px;
+    border: 1px solid grey;
+  }
+  
+  .toggle-cb + label::before, .toggle-cb + label::after {
+    display: block;
+    position: absolute;
+    top: 0.04rem;
+    left: 1.5px;
+    bottom: 1px;
+    height: 50px;
+    width: 98%;
+  }
+  
+  .toggle-cb + label::after {
+    position: absolute;
+    top: -15%;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 100%;
+    border: 0.04rem solid grey;
+    transition: margin 0.3s;
+    font-size: 0.9rem;
+    content: "";
+    color: lightgrey;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+    input.toggle-cb:checked + label::after {
+    left: 90px;
+    content: "";
+  }
+
+  .toggle-cb + label::before {
+    background-color: whitesmoke;
+    border-radius: 60px;
+    transition: background 0.3s;
+    white-space: pre;
+    line-height: 2;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+    content: "              No";
+  }
+  
+  input.toggle-cb:checked + label::before {
+    background-color: red;
+    font-size: 24px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: whitesmoke;
+    content: "Yes";
+    padding-left: 10px;
+  }

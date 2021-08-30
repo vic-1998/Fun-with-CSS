@@ -1,0 +1,99 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+  }
+  
+  .menu-open:checked + .menu-open-button,
+  .menu-item {
+    height: 4rem;
+    width: 4rem;
+  }
+  .menu-open-button {
+    flex-direction: column;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+  }
+  .menu-open-button:hover {
+    height: 5.5rem;
+    width: 5.5rem;
+    transition: ease-out 0.1s;
+  }
+  .menu-open-button,
+  .menu-item {
+    background-color: red;
+    border: 1px solid darkred;
+    border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2rem;
+    position: absolute;
+  }
+  .menu-open-button {
+    top: 0;
+    z-index: 1;
+  }
+  .menu-item {
+    text-decoration: none;
+    top: 0;
+    font-size: 1.4rem;
+    visibility: hidden;
+    transition: top 1s;
+    z-index: 0;
+  }
+  .menu-item:hover {
+    background-color: white;
+  }
+  .menu-item:hover i {
+    color: darkred;
+  }
+  i {
+    color: white;
+  }
+  .menu-line-1,
+  .menu-line-2,
+  .menu-line-3 {
+    background-color: White;
+    height: 4px;
+    width: 45%;
+    margin: .2rem;
+    transform: rotate(0);
+    transition: transform 0.1s;
+  }
+  .menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(45deg);
+    margin-top: 11.5px;
+    transition: 0.1s ease-out;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    transform: rotate(-45deg);
+    margin-top: -1.5px;
+    transition: 0.1s ease-out;
+  }
+
+  .menu-open:checked + .menu-open-button .menu-line-3 {
+    visibility: hidden;
+  }
+ 
+  .menu-open:checked ~ .menu-item {
+    visibility: visible;
+  }
+  .menu-open:checked ~ .menu-item:nth-of-type(1) {
+    top: 5rem;
+  }
+  .menu-open:checked ~ .menu-item:nth-of-type(2) {
+    top: 10rem;
+  }
+  .menu-open:checked ~ .menu-item:nth-of-type(3) {
+    top: 15rem;
+  }
+  .menu-open:checked ~ .menu-item:nth-of-type(4) {
+    top: 20rem;
+  }
+  .menu-open:checked ~ .menu-item:nth-of-type(5) {
+    top: 25rem;
+  }
